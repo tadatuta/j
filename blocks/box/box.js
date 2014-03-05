@@ -1,16 +1,10 @@
-/** @requires BEM */
-/** @requires BEM.DOM */
+modules.define('box', ['i-bem__dom'] function(provide, BEMDOM) {
 
-(function($) {
-
-BEM.DOM.decl('box', {}, {
-
-    live : function() {
-        this.liveBindTo('switcher', 'click', function(){
-            this.toggleMod('closed', 'yes');
-        });
-    }
-
-});
-
-})(jQuery);
+    provide(BEMDOM.decl('box', {}, {
+        live : function() {
+            this.liveBindTo('switcher', 'click', function() {
+                this.toggleMod('closed', 'yes');
+            });
+        }
+    }));
+})

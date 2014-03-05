@@ -1,7 +1,7 @@
-block box {
+block('box')(
+	js()(true),
 
-    js: true
-
-    elem switcher, tag: 'span'
-
-}
+	elem('switcher')(
+		tag()('span')
+	)
+);
