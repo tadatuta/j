@@ -1,4 +1,4 @@
-modules.define('box', ['i-bem__dom'] function(provide, BEMDOM) {
+modules.define('box', ['i-bem__dom'], function(provide, BEMDOM) {
 
     provide(BEMDOM.decl('box', {}, {
         live : function() {
@@ -8,3 +8,5 @@ modules.define('box', ['i-bem__dom'] function(provide, BEMDOM) {
         }
     }));
 })
+
+
