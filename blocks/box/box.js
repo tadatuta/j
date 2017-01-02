@@ -1,12 +1,15 @@
-modules.define('box', ['i-bem__dom'], function(provide, BEMDOM) {
+modules.define('box', ['i-bem-dom'], function(provide, bemDom) {
 
-    provide(BEMDOM.decl('box', {}, {
-        live : function() {
-            this.liveBindTo('switcher', 'click', function() {
-                this.toggleMod('closed', 'yes');
-            });
+    provide(bemDom.declBlock('box', {
+        _onClick: function() {
+            this.toggleMod('closed', 'yes');
+        }
+    }, {
+        lazyInit: true,
+
+        onInit : function() {
+            this._domEvents().on('click', this.prototype._onClick);
         }
     }));
-})
 
-
+});
